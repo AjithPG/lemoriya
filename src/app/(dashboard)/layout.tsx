@@ -1,3 +1,4 @@
+import { DashboardProvider } from '@/components/features/layout/DashboardContext';
 import { AppShell } from '@/components/features/layout/AppShell';
 import { Sidebar } from '@/components/features/layout/Sidebar';
 
@@ -7,8 +8,11 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <AppShell sidebar={<Sidebar />}>
-      {children}
-    </AppShell>
+    <DashboardProvider>
+      <AppShell sidebar={<Sidebar />}>
+        {children}
+      </AppShell>
+    </DashboardProvider>
   );
 }
+
