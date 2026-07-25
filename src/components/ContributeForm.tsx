@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { PromptItem } from './promptsData'
+import { PromptItem } from '@/data/promptsData'
 import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import { Button } from '@/components/ui/Button'

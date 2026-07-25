@@ -12,6 +12,9 @@ export const AppShell = ({ children, sidebar }: AppShellProps) => {
     <div className="flex h-screen flex-row overflow-hidden">
       <aside className="hidden md:flex w-60 flex-col overflow-y-auto border-r border-[#E2E8F0] bg-[#FFFFFF] ">
         {sidebar}
+        <div className="text-center text-[10px] text-[#94A3B8] font-medium mb-2.5">
+          © 2026 Lemoriya
+        </div>
       </aside>
       <main className="flex flex-1 flex-col overflow-hidden bg-[#F9FAFB]">{children}</main>
     </div>

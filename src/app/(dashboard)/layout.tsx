@@ -1,6 +1,6 @@
-import { DashboardProvider } from '@/components/features/layout/DashboardContext';
-import { AppShell } from '@/components/features/layout/AppShell';
-import { Sidebar } from '@/components/features/layout/Sidebar';
+import { DashboardProvider } from '@/context/DashboardContext';
+import { AppShell } from '@/components/layout/AppShell';
+import { Sidebar } from '@/components/layout/Sidebar';
 
 export default function DashboardLayout({
   children,

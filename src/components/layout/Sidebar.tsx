@@ -1,11 +1,14 @@
-import { useDashboard } from './DashboardContext'
-import { CATEGORIES_WITH_COUNTS } from '../promptsData'
+'use client'
+
+import { useDashboard } from '@/context/DashboardContext'
 import { Button } from '@/components/ui/Button'
-import { Sparkles } from 'lucide-react'
+import { Sparkles, LayoutGrid, TrendingUp, Star, FolderTree } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 export const Sidebar = () => {
   const { currentCategory, setCurrentCategory, currentView, setCurrentView, setSelectedPromptId } =
     useDashboard()
+  const router = useRouter()
 
   return (
     <div className="flex flex-col h-full bg-[#FFFFFF] border-r border-[#E2E8F0] text-[#0F172A] select-none">
@@ -41,69 +44,22 @@ export const Sidebar = () => {
             {
               id: 'browse',
               label: 'All Prompts',
-              icon: (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-              ),
+              icon: <LayoutGrid className="w-4 h-4" />,
             },
             {
               id: 'trending',
               label: 'Trending',
-              icon: (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9.879z"
-                  />
-                </svg>
-              ),
+              icon: <TrendingUp className="w-4 h-4" />,
             },
             {
               id: 'favorites',
               label: 'Favorites',
-              icon: (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              ),
+              icon: <Star className="w-4 h-4" />,
             },
             {
-              id: 'categories-nav',
+              id: 'categories',
               label: 'Categories',
-              icon: (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                  />
-                </svg>
-              ),
-              onClickOverride: () => {
-                setCurrentView('browse')
-                setCurrentCategory('Art')
-                setSelectedPromptId(null)
-              },
+              icon: <FolderTree className="w-4 h-4" />,
             },
           ].map((item) => {
             const isActive = currentView === item.id && currentCategory === null
@@ -111,8 +67,15 @@ export const Sidebar = () => {
               <Button
                 key={item.id}
                 onClick={() => {
-                  if (item.onClickOverride) {
-                    item.onClickOverride()
+                  const routeMap: Record<string, string> = {
+                    browse: '/',
+                    trending: '/trending',
+                    favorites: '/favorites',
+                    categories: '/categories',
+                  }
+                  const path = routeMap[item.id]
+                  if (path) {
+                    router.push(path)
                   } else {
                     setCurrentView(item.id)
                     setCurrentCategory(null)
@@ -135,7 +98,7 @@ export const Sidebar = () => {
       </div>
 
       {/* Categories List Section */}
-      <div className="px-4 py-6 flex-1 overflow-y-auto bg-[#FFFFFF]">
+      {/* <div className="px-4 py-6 flex-1 overflow-y-auto bg-[#FFFFFF]">
         <h2 className="text-[10px] font-sans font-bold tracking-widest text-[#94A3B8] uppercase mb-3 px-3">
           Categories
         </h2>
@@ -163,11 +126,10 @@ export const Sidebar = () => {
             )
           })}
         </div>
-      </div>
+      </div> */}
 
       {/* Contribute a Prompt Box & Footer */}
-      <div className="p-4 border-t border-[#E2E8F0] bg-[#FFFFFF] flex flex-col gap-4">
-        {/* Light Widget Box */}
+      {/* <div className="p-4 border-t border-[#E2E8F0] bg-[#FFFFFF] flex flex-col gap-4">
         <div className="bg-[#F8F9FC] border border-[#E2E8F0] rounded-2xl p-4 flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-[#EEF2FF] text-[#6366F1] rounded-lg flex items-center justify-center">
@@ -197,9 +159,7 @@ export const Sidebar = () => {
             Submit Prompt
           </Button>
         </div>
-
-        <div className="text-center text-[10px] text-[#94A3B8] font-medium">© 2026 PromptVault</div>
-      </div>
+      </div> */}
     </div>
   )
 }

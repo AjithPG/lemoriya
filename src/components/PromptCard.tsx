@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import { Heart, Copy, Check, MoreVertical } from 'lucide-react'
-import { PromptItem } from './promptsData'
-import { useDashboard } from './layout/DashboardContext'
+import { PromptItem } from '@/data/promptsData'
+import { useDashboard } from '@/context/DashboardContext'
 import { Card, CardFooter } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'

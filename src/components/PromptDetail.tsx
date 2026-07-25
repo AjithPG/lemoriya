@@ -1,8 +1,8 @@
 'use client'
 
 import * as React from 'react'
-import { PromptItem, MODEL_OPTIONS, ASPECT_RATIOS, STYLE_OPTIONS } from './promptsData'
-import { useDashboard } from './layout/DashboardContext'
+import { PromptItem, MODEL_OPTIONS, ASPECT_RATIOS, STYLE_OPTIONS } from '@/data/promptsData'
+import { useDashboard } from '@/context/DashboardContext'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Textarea } from '@/components/ui/Textarea'

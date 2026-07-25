@@ -1,5 +1,5 @@
-import { useDashboard } from './DashboardContext';
-import { CATEGORIES_WITH_COUNTS } from '../promptsData';
+import { useDashboard } from '@/context/DashboardContext';
+import { CATEGORIES_WITH_COUNTS } from '@/data/promptsData';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 
