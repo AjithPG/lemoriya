@@ -145,7 +145,7 @@ export function HomeContent() {
       <Header />
 
       {/* Main viewport body scrollable */}
-      <div className="flex-1 overflow-y-auto bg-[#F9FAFB]">{renderContent()}</div>
+      <div className="flex-1 overflow-y-auto bg-background">{renderContent()}</div>
     </div>
   )
 }

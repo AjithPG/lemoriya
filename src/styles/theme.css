@@ -1,0 +1,94 @@
+/* ==========================================================
+   Lemoriya Tailwind Theme Mapping
+   Maps CSS custom properties from token.css to Tailwind v4 @theme
+   ========================================================== */
+
+@theme {
+  /* --------------------------------------------------------
+     Colors & Surfaces
+  -------------------------------------------------------- */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  /* --------------------------------------------------------
+     Typography
+  -------------------------------------------------------- */
+  --font-sans: var(--font-family);
+
+  --text-xs: var(--text-xs);
+  --text-sm: var(--text-sm);
+  --text-base: var(--text-base);
+  --text-lg: var(--text-lg);
+  --text-xl: var(--text-xl);
+  --text-2xl: var(--text-2xl);
+  --text-3xl: var(--text-3xl);
+  --text-4xl: var(--text-4xl);
+  --text-5xl: var(--text-5xl);
+
+  --font-weight-regular: var(--font-regular);
+  --font-weight-medium: var(--font-medium);
+  --font-weight-semibold: var(--font-semibold);
+  --font-weight-bold: var(--font-bold);
+
+  /* --------------------------------------------------------
+     Spacing Scale
+  -------------------------------------------------------- */
+  --space-1: var(--space-1);
+  --space-2: var(--space-2);
+  --space-3: var(--space-3);
+  --space-4: var(--space-4);
+  --space-5: var(--space-5);
+  --space-6: var(--space-6);
+  --space-8: var(--space-8);
+  --space-10: var(--space-10);
+  --space-12: var(--space-12);
+  --space-16: var(--space-16);
+
+  /* --------------------------------------------------------
+     Border Radius
+  -------------------------------------------------------- */
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-full: var(--radius-full);
+
+  /* --------------------------------------------------------
+     Box Shadows
+  -------------------------------------------------------- */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-glow: var(--shadow-glow);
+
+  /* --------------------------------------------------------
+     Transitions & Ease
+  -------------------------------------------------------- */
+  --ease-default: var(--ease-default);
+}

@@ -45,15 +45,15 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex flex-col bg-transparent text-[#0F172A] select-none py-6 px-8 gap-6">
+    <header className="flex flex-col bg-transparent text-text-primary select-none py-6 px-8 gap-6">
       
       {/* Top Row: Title, Subtitle, and Favorites button */}
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-[#0F172A] leading-none">
+          <h1 className="text-3xl font-extrabold tracking-tight text-text-primary leading-none">
             {getHeaderTitle()}
           </h1>
-          <p className="text-sm text-[#64748B] mt-2 font-medium">
+          <p className="text-sm text-text-secondary mt-2 font-medium">
             {getHeaderSubtitle()}
           </p>
         </div>

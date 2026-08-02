@@ -5,7 +5,7 @@ export const Tabs = ({ className = '', ...props }: React.HTMLAttributes<HTMLDivE
 );
 
 export const TabsList = ({ className = '', ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={`flex items-center border-b border-[#E2E8F0] ${className}`.trim()} {...props} />
+  <div className={`flex items-center border-b border-border ${className}`.trim()} {...props} />
 );
 
 interface TabsTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,13 +21,13 @@ export const TabsTrigger = ({
   <button
     type="button"
     className={`py-3 text-xs font-bold relative focus:outline-none cursor-pointer transition-colors ${
-      isActive ? 'text-[#6366F1]' : 'text-[#64748B] hover:text-[#0F172A]'
+      isActive ? 'text-primary' : 'text-text-secondary hover:text-text-primary'
     } ${className}`.trim()}
     {...props}
   >
     {children}
     {isActive && (
-      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6366F1]" />
+      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary" />
     )}
   </button>
 );

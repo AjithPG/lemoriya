@@ -1,0 +1,166 @@
+/* ==========================================================
+   Lemoriya Global Styles & Modern CSS Reset
+   ========================================================== */
+
+/* --------------------------------------------------------
+   Imports
+-------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "./token.css";
+@import "tailwindcss";
+@import "./theme.css";
+@source "../";
+
+/* --------------------------------------------------------
+   1. Modern CSS Reset
+-------------------------------------------------------- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 100%; /* 1rem = 16px baseline */
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--background, #ffffff);
+    color: var(--foreground, #111827);
+    font-family: var(--font-family, Inter, system-ui, sans-serif);
+    font-size: var(--text-base, 1rem);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* --------------------------------------------------------
+     2. Media Elements Reset
+  -------------------------------------------------------- */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* --------------------------------------------------------
+     3. Typography & Links Reset
+  -------------------------------------------------------- */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary, var(--foreground, #111827));
+    font-weight: var(--font-semibold, 600);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    overflow-wrap: break-word;
+    color: var(--text-secondary, var(--foreground-muted, #6b7280));
+  }
+
+  a {
+    color: var(--primary, #2563eb);
+    text-decoration: none;
+    transition: color var(--transition-fast, 150ms ease);
+  }
+
+  a:hover {
+    color: var(--primary-hover, #1d4ed8);
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875em;
+  }
+
+  /* --------------------------------------------------------
+     4. Form Elements & Controls Reset
+  -------------------------------------------------------- */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* Focus Visible Accessibility */
+  :focus-visible {
+    outline: 0.125rem solid var(--color-primary, #2563eb);
+    outline-offset: 0.125rem;
+  }
+}
+
+/* --------------------------------------------------------
+   5. Custom Scrollbar
+-------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 0.5rem;   /* 8px */
+  height: 0.5rem;  /* 8px */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface, #f8fafc);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border, #cbd5e1);
+  border-radius: var(--radius-xs, 0.25rem);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground-muted, #94a3b8);
+}
+
+/* --------------------------------------------------------
+   6. Text Selection
+-------------------------------------------------------- */
+::selection {
+  background-color: var(--color-accent-light, #dbeafe);
+  color: var(--color-primary-active, #1e40af);
+}
+
+/* --------------------------------------------------------
+   7. Accessibility Helpers
+-------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

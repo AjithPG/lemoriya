@@ -1,0 +1,142 @@
+/* ==========================================================
+   Lemoriya Design Tokens
+   ========================================================== */
+
+:root {
+  /* --------------------------------------------------------
+     Light Theme Colors (Default)
+  -------------------------------------------------------- */
+  /* Primary */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-active: #1e40af;
+
+  /* Accent */
+  --accent: #38bdf8;
+  --accent-light: #dbeafe;
+
+  /* Status */
+  --success: #10b981;
+  --success-light: #ecfdf5;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #0ea5e9;
+
+  /* Theme Surfaces */
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --card: #ffffff;
+  --card-hover: #f1f5f9;
+  --foreground: #111827;
+  --foreground-muted: #6b7280;
+
+  /* Borders */
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+
+  /* Text & Typography Colors */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+
+  /* --------------------------------------------------------
+     Typography
+  -------------------------------------------------------- */
+  --font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+  --text-5xl: 3rem;        /* 48px */
+
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* --------------------------------------------------------
+     Spacing
+  -------------------------------------------------------- */
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-8: 2rem;         /* 32px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+
+  /* --------------------------------------------------------
+     Border Radius
+  -------------------------------------------------------- */
+  --radius-xs: 0.25rem;    /* 4px */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-xl: 1.5rem;     /* 24px */
+  --radius-full: 9999px;   /* Full pill */
+
+  /* --------------------------------------------------------
+     Shadows (Light)
+  -------------------------------------------------------- */
+  --shadow-sm: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgb(0 0 0 / 0.1), 0 0.125rem 0.25rem -0.125rem rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgb(0 0 0 / 0.1), 0 0.25rem 0.375rem -0.25rem rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 1.25rem 1.5625rem -0.3125rem rgb(0 0 0 / 0.1), 0 0.5rem 0.625rem -0.375rem rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 1.5625rem rgba(37, 99, 235, 0.25);
+
+  /* --------------------------------------------------------
+     Transitions & Animations
+  -------------------------------------------------------- */
+  --transition-fast: 150ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 300ms ease;
+  --ease-default: cubic-bezier(.2, .8, .2, 1);
+}
+
+/* ==========================================================
+   Dark Theme Overrides
+   Activated via [data-theme="dark"] attribute or .dark class
+   ========================================================== */
+[data-theme="dark"],
+.dark {
+  /* Primary & Accent adjustments */
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-active: #2563eb;
+  --accent-light: rgba(56, 189, 248, 0.15);
+  --success-light: rgba(16, 185, 129, 0.15);
+
+  /* Theme Surfaces */
+  --background: #0f172a;
+  --surface: #1e293b;
+  --card: #1e293b;
+  --card-hover: #334155;
+  --foreground: #f8fafc;
+  --foreground-muted: #94a3b8;
+
+  /* Borders */
+  --border: #334155;
+  --border-light: #1e293b;
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+
+  /* Dark Shadows */
+  --shadow-sm: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.3), 0 0.125rem 0.25rem -0.125rem rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.4), 0 0.25rem 0.375rem -0.25rem rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 1.25rem 1.5625rem -0.3125rem rgba(0, 0, 0, 0.5), 0 0.5rem 0.625rem -0.375rem rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 1.875rem rgba(59, 130, 246, 0.35);
+}

@@ -4,7 +4,7 @@ export const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDi
   ({ className = '', ...props }, ref) => (
     <div
       ref={ref}
-      className={`bg-[#FFFFFF] border border-[#E2E8F0] rounded-2xl p-4 flex flex-col gap-4 shadow-sm shadow-slate-100/30 hover:border-[#94A3B8]/40 hover:shadow-md hover:shadow-slate-100 transition-all duration-200 ${className}`.trim()}
+      className={`bg-card border border-border rounded-2xl p-4 flex flex-col gap-4 shadow-sm hover:border-border-light hover:shadow-md transition-all duration-200 ${className}`.trim()}
       {...props}
     />
   )
@@ -26,7 +26,7 @@ export const CardTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttribut
   ({ className = '', ...props }, ref) => (
     <h3
       ref={ref}
-      className={`font-sans text-base font-extrabold text-[#0F172A] leading-tight ${className}`.trim()}
+      className={`font-sans text-base font-extrabold text-text-primary leading-tight ${className}`.trim()}
       {...props}
     />
   )
@@ -37,7 +37,7 @@ export const CardDescription = React.forwardRef<HTMLParagraphElement, React.HTML
   ({ className = '', ...props }, ref) => (
     <p
       ref={ref}
-      className={`text-xs text-[#64748B] leading-relaxed font-medium ${className}`.trim()}
+      className={`text-xs text-text-secondary leading-relaxed font-medium ${className}`.trim()}
       {...props}
     />
   )
