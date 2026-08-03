@@ -15,6 +15,7 @@
    1. Modern CSS Reset
 -------------------------------------------------------- */
 @layer base {
+
   *,
   *::before,
   *::after {
@@ -24,7 +25,8 @@
   }
 
   html {
-    font-size: 100%; /* 1rem = 16px baseline */
+    font-size: 100%;
+    /* 1rem = 16px baseline */
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
@@ -60,7 +62,12 @@
   /* --------------------------------------------------------
      3. Typography & Links Reset
   -------------------------------------------------------- */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--text-primary, var(--foreground, #111827));
     font-weight: var(--font-semibold, 600);
     line-height: 1.25;
@@ -125,8 +132,10 @@
    5. Custom Scrollbar
 -------------------------------------------------------- */
 ::-webkit-scrollbar {
-  width: 0.5rem;   /* 8px */
-  height: 0.5rem;  /* 8px */
+  width: 0.5rem;
+  /* 8px */
+  height: 0.5rem;
+  /* 8px */
 }
 
 ::-webkit-scrollbar-track {
