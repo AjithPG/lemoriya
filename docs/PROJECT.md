@@ -58,6 +58,14 @@ src
 
 ## Project Database
 
-Tables
-Category - id,name,slug,icon,created_at
-Posters - id,category,title,slug,description,preview_image,prompt_template,styles,status,featured,created_at
+## _Tables_
+
+-Category - id,name,slug,icon,created_at
+-Posters - id,category,title,slug,description,preview_image,prompt_template,styles,status,featured,- created_at
+
+## _Components_
+
+- Button
+  -Categories
+  -Posters
+  -Footer

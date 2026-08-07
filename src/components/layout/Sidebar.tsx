@@ -3,34 +3,39 @@
 import { useDashboard } from '@/context/DashboardContext'
 import { Button } from '@/components/ui/Button'
 import { Sparkles, LayoutGrid, TrendingUp, Star, FolderTree } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { CATEGORIES_WITH_COUNTS } from '@/data/promptsData'
 
 export const Sidebar = () => {
   const { currentCategory, setCurrentCategory, currentView, setCurrentView, setSelectedPromptId } =
     useDashboard()
   const router = useRouter()
+  const pathname = usePathname()
 
   const navItems = [
     {
       id: 'browse',
       label: 'All Prompts',
       icon: <LayoutGrid className="w-4 h-4" />,
+      path: '/',
     },
     {
       id: 'trending',
       label: 'Trending',
       icon: <TrendingUp className="w-4 h-4" />,
+      path: '/trending',
     },
     {
       id: 'favorites',
       label: 'Favorites',
       icon: <Star className="w-4 h-4" />,
+      path: '/favorites',
     },
     {
       id: 'categories',
       label: 'Categories',
       icon: <FolderTree className="w-4 h-4" />,
+      path: '/categories',
     },
   ]
 
@@ -65,24 +70,16 @@ export const Sidebar = () => {
       <div className="px-3 py-4 border-b border-border">
         <nav className="flex flex-col gap-1">
           {navItems.map((item) => {
-            const isActive = currentView === item.id && currentCategory === null
+            const isActive = (pathname === item.path || (pathname === '/' && item.id === 'browse' && currentView === 'browse')) && currentCategory === null
             return (
               <Button
                 key={item.id}
                 onClick={() => {
-                  const routeMap: Record<string, string> = {
-                    browse: '/',
-                    trending: '/trending',
-                    favorites: '/favorites',
-                    categories: '/categories',
-                  }
-                  const path = routeMap[item.id]
-                  if (path) {
-                    router.push(path)
-                  } else {
-                    setCurrentView(item.id)
-                    setCurrentCategory(null)
-                    setSelectedPromptId(null)
+                  setCurrentCategory(null)
+                  setSelectedPromptId(null)
+                  setCurrentView(item.id)
+                  if (item.path) {
+                    router.push(item.path)
                   }
                 }}
                 variant="ghost"
