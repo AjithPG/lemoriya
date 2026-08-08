@@ -29,7 +29,6 @@ function FavoritesContent() {
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
-      <Header />
       <div className="flex-1 overflow-y-auto bg-background p-6">
         {favoritePrompts.length === 0 ? (
           <EmptyState
