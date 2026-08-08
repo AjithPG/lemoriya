@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { ArrowRight, Eye, Copy, Check, Sparkles } from 'lucide-react'
 import { useDashboard } from '@/context/DashboardContext'
 import { useRouter } from 'next/navigation'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/Button/Button'
 
 export interface TrendingPosterItem {
   id: string
@@ -120,11 +120,8 @@ export const TrendingPostersSection = () => {
         {/* Header Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-text-primary">
-              Trending{' '}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary-hover bg-clip-text text-transparent">
-                Posters
-              </span>
+            <h2 className="font-display text-3xl sm:text-4xl tracking-wide uppercase text-text-primary">
+              TRENDING <span className="text-primary">POSTERS</span>
             </h2>
             <p className="text-text-secondary text-sm font-medium mt-1">
               Most popular poster prompts this week

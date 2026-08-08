@@ -8,19 +8,19 @@ export const Badge = ({ className = '', variant = 'default', ...props }: BadgePr
   const baseStyles = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold transition-colors select-none';
 
   const variants = {
-    default: 'bg-[#6366F1] text-white',
-    outline: 'border border-[#E2E8F0] text-[#0F172A]',
-    secondary: 'bg-[#F1F5F9] text-[#64748B]',
-    
+    default: 'bg-primary text-white',
+    outline: 'border border-border text-text-primary',
+    secondary: 'bg-surface text-text-secondary',
+
     // Category specific
-    master: 'bg-[#EEF2FF] text-[#6366F1] border border-[#DDD6FE]',
-    photography: 'bg-[#E0F2FE] text-[#0369A1]',
-    anime: 'bg-[#FDF2F8] text-[#BE185D]',
-    '3d render': 'bg-[#ECFDF5] text-[#047857]',
-    'ui / ux': 'bg-[#FAF5FF] text-[#6B21A8]',
-    'sci-fi': 'bg-[#ECFEFF] text-[#0891B2]',
-    nature: 'bg-[#F0FDF4] text-[#166534]',
-    architecture: 'bg-[#FFF7ED] text-[#C2410C]'
+    master: 'bg-accent-light text-primary border border-secondary-border',
+    photography: 'bg-sky-100 text-sky-800',
+    anime: 'bg-pink-100 text-pink-800',
+    '3d render': 'bg-emerald-100 text-emerald-800',
+    'ui / ux': 'bg-purple-100 text-purple-800',
+    'sci-fi': 'bg-cyan-100 text-cyan-800',
+    nature: 'bg-green-100 text-green-800',
+    architecture: 'bg-amber-100 text-amber-800'
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${className}`.trim();

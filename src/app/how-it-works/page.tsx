@@ -2,27 +2,27 @@
 
 import * as React from 'react'
 import Link from 'next/link'
-import { Sparkles, ArrowRight, Home } from 'lucide-react'
+import { Sparkles, ArrowRight, Home, Mail, Check, Wand2 } from 'lucide-react'
 import DashboardLayout from '@/app/(dashboard)/layout'
 
-function CategoriesComingSoonContent() {
+function HowItWorksComingSoonContent() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 py-16 max-w-4xl mx-auto my-8">
       {/* Top Pill Tag */}
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-light border border-secondary-border text-primary text-xs font-extrabold uppercase tracking-widest mb-6 shadow-sm">
-        <Sparkles className="w-4 h-4 text-primary" />
-        <span>COMING SOON</span>
+        <Wand2 className="w-4 h-4 text-primary" />
+        <span>GUIDE COMING SOON</span>
       </div>
 
       {/* Bangers Display Headline */}
       <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase tracking-wide text-text-primary leading-[1.05] max-w-3xl mb-6">
-        CATEGORIES IS <span className="text-primary">COMING SOON.</span>
+        HOW IT WORKS GUIDE IS <span className="text-primary">COMING SOON.</span>
       </h1>
 
       {/* Subtitle */}
       <p className="text-text-secondary text-base sm:text-lg font-medium leading-relaxed max-w-xl mb-10">
-        We're building an extraordinary category explorer with advanced AI prompt filters, style
-        collections, and instant prompt generators. Stay tuned!
+        We're assembling step-by-step masterclasses on crafting high-converting AI prompts,
+        parameter tuning for Midjourney v6 & DALL-E 3, and professional poster design secrets.
       </p>
 
       {/* Action Buttons */}
@@ -47,10 +47,10 @@ function CategoriesComingSoonContent() {
   )
 }
 
-export default function CategoriesPage() {
+export default function HowItWorksPage() {
   return (
     <DashboardLayout>
-      <CategoriesComingSoonContent />
+      <HowItWorksComingSoonContent />
     </DashboardLayout>
   )
 }

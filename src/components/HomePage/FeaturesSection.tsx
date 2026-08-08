@@ -53,11 +53,8 @@ export const FeaturesSection = () => {
       <div className="bg-card border border-border rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl transition-colors duration-200">
         {/* Section Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-text-primary">
-            Why Creators Love{' '}
-            <span className="bg-gradient-to-r from-primary via-accent to-primary-hover bg-clip-text text-transparent">
-              Lemoriya
-            </span>
+          <h2 className="font-display text-3xl sm:text-4xl tracking-wide uppercase text-text-primary">
+            WHY CREATORS LOVE <span className="text-primary">Lemoriya AI</span>
           </h2>
         </div>
 

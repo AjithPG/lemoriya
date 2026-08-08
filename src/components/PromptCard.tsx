@@ -4,9 +4,9 @@ import * as React from 'react'
 import { Heart, Copy, Check, MoreVertical } from 'lucide-react'
 import { PromptItem } from '@/data/promptsData'
 import { useDashboard } from '@/context/DashboardContext'
-import { Card, CardFooter } from '@/components/ui/Card'
-import { Button } from '@/components/ui/Button'
-import { Badge } from '@/components/ui/Badge'
+import { Card, CardFooter } from '@/components/ui/Card/Card'
+import { Button } from '@/components/ui/Button/Button'
+import { Badge } from '@/components/ui/Badge/Badge'
 
 interface PromptCardProps {
   promptItem: PromptItem
@@ -48,7 +48,7 @@ export const PromptCard = ({ promptItem, onClick }: PromptCardProps) => {
   return (
     <Card onClick={onClick} className="cursor-pointer select-none group">
       {/* Visual Thumbnail with floating heart */}
-      <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-slate-50 border border-[#E2E8F0]/40">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface border border-border/40">
         {/* Floating Quick Favorite heart button */}
         <Button
           onClick={handleFavoriteClick}

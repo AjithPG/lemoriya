@@ -5,11 +5,25 @@
 /* --------------------------------------------------------
    Imports
 -------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 @import "./token.css";
 @import "tailwindcss";
 @import "./theme.css";
 @source "../";
+
+@layer utilities {
+  .font-display {
+    font-family: 'Bangers', cursive, system-ui, sans-serif;
+    letter-spacing: 0.04em;
+  }
+  .font-mono-code {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .corner-squircle {
+    corner-shape: squircle;
+    border-radius: var(--radius-xl, 1.25rem);
+  }
+}
 
 /* --------------------------------------------------------
    1. Modern CSS Reset

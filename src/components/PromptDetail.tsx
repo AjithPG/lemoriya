@@ -3,10 +3,10 @@
 import * as React from 'react'
 import { PromptItem, MODEL_OPTIONS, ASPECT_RATIOS, STYLE_OPTIONS } from '@/data/promptsData'
 import { useDashboard } from '@/context/DashboardContext'
-import { Button } from '@/components/ui/Button'
-import { Badge } from '@/components/ui/Badge'
-import { Textarea } from '@/components/ui/Textarea'
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/Tabs'
+import { Button } from '@/components/ui/Button/Button'
+import { Badge } from '@/components/ui/Badge/Badge'
+import { Textarea } from '@/components/ui/Textarea/Textarea'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/Tab/Tabs'
 
 interface PromptDetailProps {
   promptItem: PromptItem

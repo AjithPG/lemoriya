@@ -1,7 +1,7 @@
 'use client'
 
 import { useDashboard } from '@/context/DashboardContext'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/Button/Button'
 import { Sparkles, LayoutGrid, TrendingUp, Star, FolderTree } from 'lucide-react'
 import { useRouter, usePathname } from 'next/navigation'
 import { CATEGORIES_WITH_COUNTS } from '@/data/promptsData'
@@ -70,7 +70,10 @@ export const Sidebar = () => {
       <div className="px-3 py-4 border-b border-border">
         <nav className="flex flex-col gap-1">
           {navItems.map((item) => {
-            const isActive = (pathname === item.path || (pathname === '/' && item.id === 'browse' && currentView === 'browse')) && currentCategory === null
+            const isActive =
+              (pathname === item.path ||
+                (pathname === '/' && item.id === 'browse' && currentView === 'browse')) &&
+              currentCategory === null
             return (
               <Button
                 key={item.id}

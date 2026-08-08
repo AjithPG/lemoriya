@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 import { useDashboard } from '@/context/DashboardContext'
 import { useRouter } from 'next/navigation'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/Button/Button'
 
 export interface CategoryCardItem {
   id: string
@@ -99,11 +99,8 @@ export const CategoriesSection = () => {
         {/* Top Header Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-text-primary">
-              Explore by{' '}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary-hover bg-clip-text text-transparent">
-                Categories
-              </span>
+            <h2 className="font-display text-3xl sm:text-4xl tracking-wide uppercase text-text-primary">
+              EXPLORE BY <span className="text-primary">CATEGORIES</span>
             </h2>
             <p className="text-text-secondary text-sm font-medium mt-1">
               Find the perfect prompt for your poster needs

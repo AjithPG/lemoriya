@@ -3,104 +3,141 @@
    ========================================================== */
 
 :root {
-  /* --------------------------------------------------------
-     Light Theme Colors (Default)
+   /* --------------------------------------------------------
+     Light Theme Colors (Creative TypeUI Theme)
   -------------------------------------------------------- */
-  /* Primary */
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --primary-active: #1e40af;
+   /* Primary Violet & Hover/Active States */
+   --primary: #5B4BDB;
+   --primary-hover: #4C3FC7;
+   --primary-active: #4338CA;
 
-  /* Accent */
-  --accent: #38bdf8;
-  --accent-light: #dbeafe;
+   /* Secondary Violet & Accent Colors */
+   --secondary: #8B5CF6;
+   --secondary-hover: #7C3AED;
+   --secondary-active: #6D28D9;
+   --secondary-light: #EDE9FE;
+   --secondary-border: #DDD6FE;
+   --secondary-dark: #5B21B6;
 
-  /* Status */
-  --success: #10b981;
-  --success-light: #ecfdf5;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --info: #0ea5e9;
 
-  /* Theme Surfaces */
-  --background: #ffffff;
-  --surface: #f8fafc;
-  --card: #ffffff;
-  --card-hover: #f1f5f9;
-  --foreground: #111827;
-  --foreground-muted: #6b7280;
+   --accent: #06B6D4;
+   --accent-hover: #0891B2;
+   --accent-active: #0E7490;
+   --accent-light: #ECFEFF;
+   --accent-border: #A5F3FC;
 
-  /* Borders */
-  --border: #e5e7eb;
-  --border-light: #f3f4f6;
+   --dark-pill: #474354;
 
-  /* Text & Typography Colors */
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
 
-  /* --------------------------------------------------------
+   /* Status Colors */
+   --success: #16A34A;
+   --success-light: #f0fdf4;
+   --warning: #D97706;
+   --danger: #DC2626;
+   --info: #0284c7;
+
+   /* Theme Surfaces */
+   --background: #F8FAFC;
+   --surface: #FFFFFF;
+   --card: #ffffff;
+   --card-hover: #faf8ff;
+   --foreground: #111827;
+   --foreground-secondary: #374151;
+   --muted: #64748B;
+
+
+
+   /* Borders */
+   --border: #E2E8F0;
+   --border-light: #f0ecff;
+   --border-strong: #CBD5E1;
+
+   /* Text & Typography Colors */
+   --text-primary: #111827;
+   --text-secondary: #6b6689;
+   --text-muted: #9ca3af;
+
+   /* --------------------------------------------------------
      Typography
   -------------------------------------------------------- */
-  --font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+   --font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+   --font-display: 'Bangers', cursive, system-ui, sans-serif;
+   --font-mono: 'IBM Plex Mono', monospace;
 
-  /* Font Sizes */
-  --text-xs: 0.75rem;      /* 12px */
-  --text-sm: 0.875rem;     /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg: 1.125rem;     /* 18px */
-  --text-xl: 1.25rem;      /* 20px */
-  --text-2xl: 1.5rem;      /* 24px */
-  --text-3xl: 1.875rem;    /* 30px */
-  --text-4xl: 2.25rem;     /* 36px */
-  --text-5xl: 3rem;        /* 48px */
+   /* Font Sizes */
+   --text-xs: 0.75rem;
+   /* 12px */
+   --text-sm: 0.875rem;
+   /* 14px */
+   --text-base: 1rem;
+   /* 16px */
+   --text-lg: 1.125rem;
+   /* 18px */
+   --text-xl: 1.25rem;
+   /* 20px */
+   --text-2xl: 1.5rem;
+   /* 24px */
+   --text-3xl: 1.875rem;
+   /* 30px */
+   --text-4xl: 2.25rem;
+   /* 36px */
+   --text-5xl: 3rem;
+   /* 48px */
 
-  /* Font Weights */
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
+   /* Font Weights */
+   --font-regular: 400;
+   --font-medium: 500;
+   --font-semibold: 600;
+   --font-bold: 700;
 
-  /* --------------------------------------------------------
+   /* --------------------------------------------------------
      Spacing
   -------------------------------------------------------- */
-  --space-1: 0.25rem;      /* 4px */
-  --space-2: 0.5rem;       /* 8px */
-  --space-3: 0.75rem;      /* 12px */
-  --space-4: 1rem;         /* 16px */
-  --space-5: 1.25rem;      /* 20px */
-  --space-6: 1.5rem;       /* 24px */
-  --space-8: 2rem;         /* 32px */
-  --space-10: 2.5rem;      /* 40px */
-  --space-12: 3rem;        /* 48px */
-  --space-16: 4rem;        /* 64px */
+   --space-1: 0.25rem;
+   /* 4px */
+   --space-2: 0.5rem;
+   /* 8px */
+   --space-3: 0.75rem;
+   /* 12px */
+   --space-4: 1rem;
+   /* 16px */
+   --space-5: 1.25rem;
+   /* 20px */
+   --space-6: 1.5rem;
+   /* 24px */
+   --space-8: 2rem;
+   /* 32px */
+   --space-10: 2.5rem;
+   /* 40px */
+   --space-12: 3rem;
+   /* 48px */
+   --space-16: 4rem;
+   /* 64px */
 
-  /* --------------------------------------------------------
+   /* --------------------------------------------------------
      Border Radius
   -------------------------------------------------------- */
-  --radius-xs: 0.25rem;    /* 4px */
-  --radius-sm: 0.5rem;     /* 8px */
-  --radius-md: 0.75rem;    /* 12px */
-  --radius-lg: 1rem;       /* 16px */
-  --radius-xl: 1.5rem;     /* 24px */
-  --radius-full: 9999px;   /* Full pill */
+   --radius-xs: 0.25rem;
+   /* 4px */
+   --radius-sm: 0.5rem;
+   /* 8px */
+   --radius-md: 0.75rem;
+   /* 12px */
+   --radius-lg: 1rem;
+   /* 16px */
+   --radius-xl: 1.25rem;
+   /* 24px */
+   --radius-full: 9999px;
+   /* Full pill */
 
-  /* --------------------------------------------------------
+   /* --------------------------------------------------------
      Shadows (Light)
   -------------------------------------------------------- */
-  --shadow-sm: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgb(0 0 0 / 0.1), 0 0.125rem 0.25rem -0.125rem rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgb(0 0 0 / 0.1), 0 0.25rem 0.375rem -0.25rem rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 1.25rem 1.5625rem -0.3125rem rgb(0 0 0 / 0.1), 0 0.5rem 0.625rem -0.375rem rgb(0 0 0 / 0.1);
-  --shadow-glow: 0 0 1.5625rem rgba(37, 99, 235, 0.25);
-
-  /* --------------------------------------------------------
-     Transitions & Animations
-  -------------------------------------------------------- */
-  --transition-fast: 150ms ease;
-  --transition-normal: 200ms ease;
-  --transition-slow: 300ms ease;
-  --ease-default: cubic-bezier(.2, .8, .2, 1);
+   --shadow-sm: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 0.05);
+   --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgb(0 0 0 / 0.1), 0 0.125rem 0.25rem -0.125rem rgb(0 0 0 / 0.1);
+   --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgb(0 0 0 / 0.1), 0 0.25rem 0.375rem -0.25rem rgb(0 0 0 / 0.1);
+   --shadow-xl: 0 1.25rem 1.5625rem -0.3125rem rgb(0 0 0 / 0.1), 0 0.5rem 0.625rem -0.375rem rgb(0 0 0 / 0.1);
+   --shadow-glow: 0 0 1.5625rem rgba(109, 40, 217, 0.25);
 }
 
 /* ==========================================================
@@ -109,34 +146,43 @@
    ========================================================== */
 [data-theme="dark"],
 .dark {
-  /* Primary & Accent adjustments */
-  --primary: #3b82f6;
-  --primary-hover: #60a5fa;
-  --primary-active: #2563eb;
-  --accent-light: rgba(56, 189, 248, 0.15);
-  --success-light: rgba(16, 185, 129, 0.15);
+   /* Primary & Accent adjustments */
+   --primary: #8b5cf6;
+   --primary-hover: #a78bfa;
+   --primary-active: #7c3aed;
 
-  /* Theme Surfaces */
-  --background: #0f172a;
-  --surface: #1e293b;
-  --card: #1e293b;
-  --card-hover: #334155;
-  --foreground: #f8fafc;
-  --foreground-muted: #94a3b8;
+   --secondary: #a78bfa;
+   --secondary-hover: #c4b5fd;
+   --secondary-light: rgba(139, 92, 246, 0.15);
+   --secondary-border: rgba(139, 92, 246, 0.3);
+   --secondary-dark: #c4b5fd;
 
-  /* Borders */
-  --border: #334155;
-  --border-light: #1e293b;
+   --accent-light: rgba(56, 189, 248, 0.15);
+   --success-light: rgba(22, 163, 74, 0.15);
 
-  /* Text Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
+   --dark-pill: #1e293b;
 
-  /* Dark Shadows */
-  --shadow-sm: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.3), 0 0.125rem 0.25rem -0.125rem rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.4), 0 0.25rem 0.375rem -0.25rem rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 1.25rem 1.5625rem -0.3125rem rgba(0, 0, 0, 0.5), 0 0.5rem 0.625rem -0.375rem rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 1.875rem rgba(59, 130, 246, 0.35);
+   /* Theme Surfaces */
+   --background: #0f172a;
+   --surface: #1e293b;
+   --card: #1e293b;
+   --card-hover: #334155;
+   --foreground: #f8fafc;
+   --foreground-muted: #94a3b8;
+
+   /* Borders */
+   --border: #334155;
+   --border-light: #1e293b;
+
+   /* Text Colors */
+   --text-primary: #f8fafc;
+   --text-secondary: #cbd5e1;
+   --text-muted: #64748b;
+
+   /* Dark Shadows */
+   --shadow-sm: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.4);
+   --shadow-md: 0 0.25rem 0.375rem -0.0625rem rgba(0, 0, 0, 0.3), 0 0.125rem 0.25rem -0.125rem rgba(0, 0, 0, 0.3);
+   --shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.4), 0 0.25rem 0.375rem -0.25rem rgba(0, 0, 0, 0.4);
+   --shadow-xl: 0 1.25rem 1.5625rem -0.3125rem rgba(0, 0, 0, 0.5), 0 0.5rem 0.625rem -0.375rem rgba(0, 0, 0, 0.5);
+   --shadow-glow: 0 0 1.875rem rgba(139, 92, 246, 0.35);
 }

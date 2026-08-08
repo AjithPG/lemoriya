@@ -11,8 +11,16 @@
   --color-primary-hover: var(--primary-hover);
   --color-primary-active: var(--primary-active);
 
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-border: var(--secondary-border);
+  --color-secondary-dark: var(--secondary-dark);
+
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
+
+  --color-dark-pill: var(--dark-pill);
 
   --color-success: var(--success);
   --color-success-light: var(--success-light);
@@ -38,6 +46,8 @@
      Typography
   -------------------------------------------------------- */
   --font-sans: var(--font-family);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 
   --text-xs: var(--text-xs);
   --text-sm: var(--text-sm);

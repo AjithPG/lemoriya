@@ -1,18 +1,18 @@
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/Button/Button'
 
 interface EmptyStateProps {
-  title: string;
-  description: string;
-  actionLabel?: string;
-  onAction?: () => void;
+  title: string
+  description: string
+  actionLabel?: string
+  onAction?: () => void
 }
 
 export const EmptyState = ({ title, description, actionLabel, onAction }: EmptyStateProps) => {
   return (
-    <div className="flex flex-col items-center justify-center p-12 text-center border-t border-[#E2E8F0] bg-[#FFFFFF] min-h-[50vh] select-none">
-      <div className="w-16 h-16 border border-[#E2E8F0] flex items-center justify-center rounded-full mb-6 bg-slate-50">
+    <div className="flex flex-col items-center justify-center p-12 text-center border-t border-border bg-card min-h-[50vh] select-none rounded-2xl">
+      <div className="w-16 h-16 border border-border flex items-center justify-center rounded-full mb-6 bg-surface">
         <svg
-          className="w-6 h-6 text-[#64748B]"
+          className="w-6 h-6 text-text-secondary"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -26,17 +26,15 @@ export const EmptyState = ({ title, description, actionLabel, onAction }: EmptyS
           />
         </svg>
       </div>
-      <h3 className="text-2xl font-extrabold text-[#0F172A] mb-2">{title}</h3>
-      <p className="text-sm text-[#64748B] max-w-sm mb-6 leading-relaxed font-medium">{description}</p>
+      <h3 className="text-2xl font-extrabold text-text-primary mb-2">{title}</h3>
+      <p className="text-sm text-text-secondary max-w-sm mb-6 leading-relaxed font-medium">
+        {description}
+      </p>
       {actionLabel && onAction && (
-        <Button
-          onClick={onAction}
-          variant="default"
-          className="cursor-pointer"
-        >
+        <Button onClick={onAction} variant="default" className="cursor-pointer">
           {actionLabel}
         </Button>
       )}
     </div>
-  );
-};
+  )
+}

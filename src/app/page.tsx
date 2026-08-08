@@ -4,19 +4,15 @@ import * as React from 'react'
 
 import { ContributeForm } from '@/components/ContributeForm'
 import { EmptyState } from '@/components/EmptyState'
-import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner'
-import { Header } from '@/components/layout/Header'
-
 import { PromptGrid } from '@/components/PromptGrid'
 import { useDashboard } from '@/context/DashboardContext'
 import { MOCK_PROMPTS, PromptItem } from '@/data/promptsData'
 
 import DashboardLayout from './(dashboard)/layout'
-import { HeroSection } from '@/components/HeroSection'
-import { CategoriesSection } from '@/components/CategoriesSection'
-import { TrendingPostersSection } from '@/components/TrendingPostersSection'
-import { FeaturesSection } from '@/components/FeaturesSection'
-import { Footer } from '@/components/layout/Footer'
+import { HeroSection } from '@/components/HomePage/HeroSection'
+import { CategoriesSection } from '@/components/HomePage/CategoriesSection'
+import { TrendingPostersSection } from '@/components/HomePage/TrendingPostersSection'
+import { FeaturesSection } from '@/components/HomePage/FeaturesSection'
 
 export function HomeContent() {
   const {
@@ -31,7 +27,6 @@ export function HomeContent() {
 
   // Local state for prompts (initialized with mock data, supports adding new ones)
   const [prompts, setPrompts] = React.useState<PromptItem[]>(MOCK_PROMPTS)
-  const [showBanner, setShowBanner] = React.useState<boolean>(true)
 
   // Filter prompts based on current category, search query, and view
   const filteredPrompts = React.useMemo(() => {
@@ -124,15 +119,10 @@ export function HomeContent() {
 
     // Normal grid feed view
     return (
-      <div id="prompts-feed" className="flex-grow flex flex-col">
-        {/* Render Banner above prompt grid */}
-        {/* {showBanner && currentView === 'browse' && (
-          <AnnouncementBanner onClose={() => setShowBanner(false)} />
-        )} */}
-
+      <div id="prompts-feed" className="flex-grow flex flex-col my-8 px-4 sm:px-6">
         {currentView === 'trending' && (
           <div className="px-8 pt-2 pb-4">
-            <span className="text-xs font-mono text-[#64748B] uppercase tracking-wider font-bold">
+            <span className="text-xs font-mono text-text-secondary uppercase tracking-wider font-bold">
               Sorted by view count (Highest to Lowest)
             </span>
           </div>
@@ -144,17 +134,11 @@ export function HomeContent() {
   }
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Top Header Navigation */}
-      <Header />
-      <div className="flex-1 overflow-y-scroll bg-background">
-        <HeroSection />
-        <CategoriesSection />
-        <TrendingPostersSection />
-        <FeaturesSection />
-
-        <Footer />
-      </div>
+    <div className="w-full">
+      <HeroSection />
+      <CategoriesSection />
+      <TrendingPostersSection />
+      <FeaturesSection />
     </div>
   )
 }
